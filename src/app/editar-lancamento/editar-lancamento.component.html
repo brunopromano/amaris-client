@@ -1,0 +1,38 @@
+<div class="container">
+    <form [formGroup]="lancamentoForm">
+      <h2>Adicionar Lançamento</h2>
+      <br>
+      <div>
+        <div>
+          <label for="data-lancamento">Nova Data Lançamento:</label>
+          <input id="data-lancamento" type="date" formControlName="dataLancamento" class="form-control">
+          <p class="data-atual">Data Atual: <strong>{{ lancamento.dataLancamento  | date:'dd/MM/yyyy'}}</strong></p>
+        </div>
+        <div class="col-sm">
+          <label for="tipo-lancamento">Tipo:</label>
+          <select id="tipo-lancamento" class="form-select" formControlName="tipoLancamento">
+            <option value="C" selected>Crédito</option>
+            <option value="D">Débito</option>
+          </select>
+        </div>
+        <br>
+        <div class="col-sm form-group">
+          <label for="valor-brl">Valor em reais:</label>
+          <input id="valor-brl" currencyMask 
+            [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', align: 'left' }"
+            type="text" 
+            formControlName="valorBrl" 
+            class="form-control"
+          >
+          <div *ngIf="lancamentoForm.get('valorBrl')?.touched && lancamentoForm.get('valorBrl')?.invalid" class="preenchimento-invalido">
+            <div *ngIf="lancamentoForm.get('valorBrl')?.errors">Somente números!</div>
+        </div>
+        <br>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <button class="btn add-lancamento" (click)="atualizarLancamento()" [disabled]="!lancamentoForm.valid" >Editar</button>
+          <button class="btn voltar" routerLink="/">Voltar</button>
+        </div>
+      </div>
+    </form>
+  </div>

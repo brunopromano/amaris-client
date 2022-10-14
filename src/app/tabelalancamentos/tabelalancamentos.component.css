@@ -1,0 +1,44 @@
+.container {
+    margin-top: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.excluir {
+    font-size: 16px;
+    color: red;
+    border-color: red;
+    background-color: white;
+}
+
+.excluir:hover {
+    color: white;
+    background-color: red;
+}
+
+.editar {
+    margin-right: 12px;
+    font-size: 16px;
+    color: dodgerblue;
+    border-color: dodgerblue;
+    background-color: white;
+}
+
+.editar:hover {
+    color: white;
+    background-color: dodgerblue;
+}
+
+.adicionar {
+    position: absolute;
+    right: 16%;
+    margin-right: 12px;
+    font-size: 16px;
+    color: rgb(68, 0, 255);
+    border-color: rgb(68, 0, 255);
+    background-color: white;
+}
+
+.adicionar:hover {
+    color: white;
+    background-color: rgb(68, 0, 255);
+}

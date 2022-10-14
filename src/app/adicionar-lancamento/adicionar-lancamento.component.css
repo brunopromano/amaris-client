@@ -1,0 +1,43 @@
+label {
+    display: inline-block;
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+.add-lancamento {
+    font-size: 16px;
+    color: rgb(68, 0, 255);
+    border-color: rgb(68, 0, 255);
+    background-color: white;
+}
+
+.add-lancamento:hover {
+    background-color: rgb(68, 0, 255);
+    color: white;
+}
+
+.container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.custom-font {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+.preenchimento-invalido {
+    color: red;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+.voltar {
+    font-size: 16px;
+    color: rgb(68, 0, 255);
+    border-color: rgb(68, 0, 255);
+    background-color: white;
+}

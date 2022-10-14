@@ -1,0 +1,42 @@
+<div class="container" *ngIf="lancamentos && lancamentos.length">
+  <h2 style="margin-bottom: 1rem;">
+    Lista de Lançamentos (Débito e Crédito)
+    <button type="button" class="btn adicionar float-right" routerLink="/lancamentos/adicionar">Adicionar Lançamento</button>
+  </h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Data Lançamento</th>
+        <th scope="col">Tipo Lançamento</th>
+        <th scope="col">Valor (R$)</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let lancamento of lancamentos">
+        <td>{{ lancamento.id }}</td>
+        <td>{{ lancamento.dataLancamento | date:'dd/MM/yyyy' }}</td>
+        <td>{{ lancamento.tipoLancamento }}</td>
+        <td>{{ lancamento.valorBrl | currency }}</td>
+        <td>
+          <div>
+            <button class="btn editar" routerLink="/lancamentos/editar/{{ lancamento.id }}">Editar</button>
+            <button class="btn excluir" 
+                [swal]="{
+                  title: '',
+                  text: 'Deseja realmente excluir o lançamento ' + lancamento.id + '?',
+                  showDenyButton: true,
+                  denyButtonText: 'Não',
+                  confirmButtonText: 'Sim',
+                  focusDeny: true,
+                  icon: 'warning'
+                }" (confirm)="excluirLancamento(lancamento.id)">
+              Excluir
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

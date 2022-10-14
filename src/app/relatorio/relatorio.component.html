@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Relatório (consolidado por dia)</h2>
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Dia</th>
+                <th scope="col">Total Crédito (R$)</th>
+                <th scope="col">Total Débito (R$)</th>
+                <th scope="col">Saldo do Dia (R$)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dia of listaSaldoDiario">
+                <td>{{ dia.diaConsolidado | date:'dd/MM/yyyy' }}</td>
+                <td>{{ dia.totalCredito | currency }}</td>
+                <td>{{ dia.totalDebito | currency }}</td>
+                <td [ngStyle]="{'color': obterCor(dia.saldoDia)}">{{ dia.saldoDia | currency }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
