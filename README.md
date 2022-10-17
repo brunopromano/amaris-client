@@ -24,6 +24,6 @@ Após terminar a instalação das dependências execute a aplicação com:
 
 ### Criando e executando o container
 
-Os arquivos Dockerfile e docker-compose.yml possui todas as diretivas para executar criar e executar o container do client. Para executá-lo basta abrir um terminal, apontar para a raiz do projeto e entrar com o comando:
+Os arquivos Dockerfile e docker-compose.yml possui todas as diretivas para executar criar e executar o container do client. Para executá-lo basta abrir um terminal, apontar para a raiz do projeto e entrar com o comando:  
 `$ docker compose up -d --build`  
-Dica: suba os containers do backend primeiro
+*Dica: suba os containeres do backend primeiro*
