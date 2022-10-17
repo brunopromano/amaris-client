@@ -9,7 +9,7 @@ import { ILancamento } from '../_models/ILancamento';
 })
 export class LancamentoService {
 
-  baseUrl = `${environment.baseApiUrl}/lancamentos`;
+  baseUrl: string = `${environment.BASE_URL}/lancamentos`;
 
   constructor(private http: HttpClient) { }
 
@@ -18,6 +18,7 @@ export class LancamentoService {
   }
 
   obterTodosLancamentos(): Observable<ILancamento[]> {
+    console.log(this.baseUrl);
     return this.http.get<ILancamento[]>(this.baseUrl);
   }
 

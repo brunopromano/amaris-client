@@ -8,11 +8,13 @@ import { ISaldoDiario } from '../_models/ISaldoDiario';
   providedIn: 'root'
 })
 export class RelatorioService {
-  baseUrl = `${environment.baseApiUrl}/relatorio`
+  
+  baseUrl: string = `${environment.BASE_URL}/relatorio`
 
   constructor(private http: HttpClient) { }
 
   obterRelatorio(): Observable<ISaldoDiario[]> {
+    console.log(this.baseUrl);
     return this.http.get<ISaldoDiario[]>(this.baseUrl);
   }
 }
