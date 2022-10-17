@@ -1,27 +1,29 @@
-# AmarisClient
+# Amaris Client
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
+Client (frontend) criado usando o framework [Angular](https://angular.io/docs/) versão 14.
 
-## Development server
+## Executando Localmente
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Requisitos
 
-## Code scaffolding
+[Node versão 16](https://nodejs.org/en/download/)  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Build & Run
 
-## Build
+Primeiramente é necessário baixar as dependências do projeto. No terminal, aponte para a raiz do projeto e entre com o comando:  
+`$ npm install`  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Após terminar a instalação das dependências execute a aplicação com:  
+`$ npm start`
 
-## Running unit tests
+## Executando com Docker
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Requisitos
 
-## Running end-to-end tests
+[Docker](https://docs.docker.com/desktop/install/windows-install/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Criando e executando o container
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Os arquivos Dockerfile e docker-compose.yml possui todas as diretivas para executar criar e executar o container do client. Para executá-lo basta abrir um terminal, apontar para a raiz do projeto e entrar com o comando:
+`$ docker compose  up -d --build`  
+Dica: suba os containers do backend primeiro
