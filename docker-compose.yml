@@ -3,10 +3,8 @@ version: '3.4'
 services:
   amaris-client:
     image: amaris-client
-    build:
-      context: .
-      dockerfile: ./Dockerfile
+    build: .
     ports:
-      - 8081:80
+      - 80:80
 
 # docker compose -f "docker-compose.yml" up -d --build
